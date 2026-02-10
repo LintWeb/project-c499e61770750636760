@@ -365,6 +365,22 @@
                 padding: 3rem 0;
             }
         }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
     </style>
 </head>
 <body>
@@ -403,14 +419,14 @@
         </section>
 
         <!-- Product Showcase Section -->
-        <section id="collections">
+        <section id="collections" class="reveal">
             <div class="container">
                 <div class="section-title">
                     <p>What We Offer</p>
                     <h2>Premium Beauty Essentials</h2>
                 </div>
                 <div class="showcase-grid">
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-1">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Makeup Products">
                         </div>
@@ -419,7 +435,7 @@
                             <p>From high-definition foundations to long-lasting concealers, we offer everything you need for a flawless base.</p>
                         </div>
                     </div>
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-2">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxurious Lip Colors">
                         </div>
@@ -428,7 +444,7 @@
                             <p>Explore an extensive range of matte lipsticks, high-shine glosses, and nourishing lip care products.</p>
                         </div>
                     </div>
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-3">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eye Artistry Makeup">
                         </div>
@@ -437,7 +453,7 @@
                             <p>Vibrant eyeshadow palettes, waterproof mascaras, and precision liners for every creative vision.</p>
                         </div>
                     </div>
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-1">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced Skincare Solutions">
                         </div>
@@ -446,7 +462,7 @@
                             <p>Nurture your skin with our curated selection of hydrating serums, moisturizers, and organic treatments.</p>
                         </div>
                     </div>
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-2">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beauty Accessories and Tools">
                         </div>
@@ -455,7 +471,7 @@
                             <p>Elevate your technique with our collection of premium brushes, sponges, and beauty accessories.</p>
                         </div>
                     </div>
-                    <div class="showcase-item">
+                    <div class="showcase-item reveal delay-3">
                         <div class="showcase-image">
                             <img src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Authentic International Brands">
                         </div>
@@ -469,10 +485,10 @@
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="about">
+        <section id="about" class="about reveal">
             <div class="container">
                 <div class="about-flex">
-                    <div class="about-content">
+                    <div class="about-content reveal delay-1">
                         <div class="section-title" style="text-align: left;">
                             <p>About GnG Makeup Store</p>
                             <h2>Your Local Beauty Sanctuary in Chattogram</h2>
@@ -483,7 +499,7 @@
                         <br>
                         <a href="#contact" class="btn btn-primary">Visit Us Today</a>
                     </div>
-                    <div class="about-image">
+                    <div class="about-image reveal delay-2">
                         <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GnG Makeup Store Collection">
                     </div>
                 </div>
@@ -491,14 +507,14 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="reveal">
             <div class="container">
                 <div class="section-title">
                     <p>Get in Touch</p>
                     <h2>Visit Our Store</h2>
                 </div>
                 <div class="contact-grid">
-                    <div class="contact-info">
+                    <div class="contact-info reveal delay-1">
                         <div class="info-item">
                             <div class="info-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -527,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-container">
+                    <div class="map-container reveal delay-2">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24637.644151477056!2d91.78552881824118!3d22.358114800000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd9478e4cb28b%3A0x7e42a51d1f00e84b!2sGnG%20Makeup%20Store!5e1!3m2!1sen!2sbd!4v1770750776314!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -618,6 +634,21 @@
                     }
                 }
             });
+        });
+
+        // Intersection Observer for reveal animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
         });
     </script>
 </body>

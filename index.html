@@ -175,7 +175,7 @@
             opacity: 0.9;
         }
 
-        /* Categories */
+        /* Section Titles */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
@@ -193,89 +193,45 @@
             font-size: 0.9rem;
         }
 
-        .category-grid {
+        /* Showcase Grid */
+        .showcase-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
 
-        .category-card {
-            position: relative;
-            overflow: hidden;
+        .showcase-item {
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .showcase-image {
             height: 400px;
-            cursor: pointer;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
 
-        .category-card img {
+        .showcase-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .category-card:hover img {
+        .showcase-item:hover .showcase-image img {
             transform: scale(1.05);
         }
 
-        .category-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 50%;
-        }
-
-        .category-overlay h3 {
+        .showcase-content h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
         }
 
-        /* Products Section */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            padding: 1rem;
-            transition: var(--transition);
-            border: 1px solid var(--accent);
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .product-image {
-            height: 300px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-            background-color: #f3f4f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-info {
-            text-align: center;
-        }
-
-        .product-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .price {
-            font-weight: 600;
-            color: var(--primary-dark);
+        .showcase-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         /* About Section */
@@ -327,25 +283,6 @@
             justify-content: center;
             border-radius: 50%;
             flex-shrink: 0;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--accent);
-            border-radius: 2px;
-            font-family: inherit;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
         }
 
         /* Footer */
@@ -439,10 +376,9 @@
                 <a href="#" class="logo brand-font">GnG Makeup</a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#products">New Arrivals</a></li>
+                    <li><a href="#collections">Collections</a></li>
                     <li><a href="#about">Our Story</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Find Us</a></li>
                 </ul>
                 <button class="mobile-menu-btn" aria-label="Open Menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -457,101 +393,75 @@
             <div class="container">
                 <div class="hero-content">
                     <h1>Unveil Your Inner Radiance</h1>
-                    <p>Discover a curated collection of premium beauty essentials from the world's most loved brands. From everyday classics to glamorous statements.</p>
+                    <p>Experience a premium selection of world-class cosmetics and beauty essentials. Visit our store in Chattogram to discover your perfect look.</p>
                     <div class="hero-btns">
-                        <a href="#products" class="btn btn-primary">Shop Collection</a>
-                        <a href="#categories" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">Browse Categories</a>
+                        <a href="#collections" class="btn btn-primary">Discover Collections</a>
+                        <a href="#contact" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">Visit Store</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Categories Section -->
-        <section id="categories">
+        <!-- Product Showcase Section -->
+        <section id="collections">
             <div class="container">
                 <div class="section-title">
-                    <p>Beautiful Collections</p>
-                    <h2>Shop by Category</h2>
+                    <p>What We Offer</p>
+                    <h2>Premium Beauty Essentials</h2>
                 </div>
-                <div class="category-grid">
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eyes Makeup Products">
-                        <div class="category-overlay">
-                            <h3>Eyes</h3>
-                            <a href="#">Explore &rarr;</a>
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Makeup Products">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Professional Makeup</h3>
+                            <p>From high-definition foundations to long-lasting concealers, we offer everything you need for a flawless base.</p>
                         </div>
                     </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lipstick and Lip Care">
-                        <div class="category-overlay">
-                            <h3>Lips</h3>
-                            <a href="#">Explore &rarr;</a>
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxurious Lip Colors">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Luxurious Lips</h3>
+                            <p>Explore an extensive range of matte lipsticks, high-shine glosses, and nourishing lip care products.</p>
                         </div>
                     </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1596461762244-274779700088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Face Foundation and Base">
-                        <div class="category-overlay">
-                            <h3>Face</h3>
-                            <a href="#">Explore &rarr;</a>
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1596461762244-274779700088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eye Enhancement Products">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Eye Artistry</h3>
+                            <p>Vibrant eyeshadow palettes, waterproof mascaras, and precision liners for every creative vision.</p>
                         </div>
                     </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Skincare Products">
-                        <div class="category-overlay">
-                            <h3>Skincare</h3>
-                            <a href="#">Explore &rarr;</a>
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced Skincare Solutions">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Advanced Skincare</h3>
+                            <p>Nurture your skin with our curated selection of hydrating serums, moisturizers, and organic treatments.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- New Arrivals -->
-        <section id="products" style="background-color: #fff;">
-            <div class="container">
-                <div class="section-title">
-                    <p>The Latest Beauty</p>
-                    <h2>New Arrivals</h2>
-                </div>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Velvet Matte Lipstick">
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beauty Accessories and Tools">
                         </div>
-                        <div class="product-info">
-                            <h3>Velvet Matte Lipstick</h3>
-                            <p class="price">৳ 1,200</p>
-                            <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Add to Cart</button>
+                        <div class="showcase-content">
+                            <h3>Professional Tools</h3>
+                            <p>Elevate your technique with our collection of premium brushes, sponges, and beauty accessories.</p>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1617224908593-9618eb21665b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Hydrating Serum">
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Authentic International Brands">
                         </div>
-                        <div class="product-info">
-                            <h3>Hydrating Glow Serum</h3>
-                            <p class="price">৳ 2,500</p>
-                            <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Eyeshadow Palette">
-                        </div>
-                        <div class="product-info">
-                            <h3>Midnight Palette</h3>
-                            <p class="price">৳ 3,800</p>
-                            <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mineral Foundation">
-                        </div>
-                        <div class="product-info">
-                            <h3>Flawless Foundation</h3>
-                            <p class="price">৳ 1,800</p>
-                            <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Add to Cart</button>
+                        <div class="showcase-content">
+                            <h3>Global Brands</h3>
+                            <p>We stock 100% authentic products from the most renowned international cosmetic houses.</p>
                         </div>
                     </div>
                 </div>
@@ -569,7 +479,7 @@
                         </div>
                         <p>Founded with a passion for high-quality cosmetics, GnG Makeup Store has become a trusted destination for beauty enthusiasts in Bangladesh. Located in the heart of Chattogram at Blossom Garden Market, we take pride in offering authentic products that help you express your unique style.</p>
                         <br>
-                        <p>Our collection is carefully curated to include everything from professional-grade makeup to nourishing skincare, ensuring that every customer finds exactly what they need to feel confident and beautiful.</p>
+                        <p>Our mission is to bring the best of global beauty to your doorstep, providing professional guidance and a curated experience for every visitor.</p>
                         <br>
                         <a href="#contact" class="btn btn-primary">Visit Us Today</a>
                     </div>
@@ -637,27 +547,22 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#categories">Shop All</a></li>
+                        <li><a href="#collections">Collections</a></li>
                         <li><a href="#about">Our Story</a></li>
                         <li><a href="#contact">Find Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Support</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Newsletter</h4>
-                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 1rem;">Join for beauty tips and exclusive offers.</p>
-                    <form style="display: flex;">
-                        <input type="email" placeholder="Email" style="padding: 0.5rem; width: 100%; border: none; border-radius: 2px 0 0 2px;">
-                        <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; border-radius: 0 2px 2px 0;">Join</button>
-                    </form>
+                    <h4>Contact</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 0.5rem;">+880 1864-441023</p>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Chattogram, Bangladesh</p>
                 </div>
             </div>
             <div class="copyright">
@@ -670,7 +575,7 @@
         // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile menu toggle (simple version for demo)
+        // Mobile menu toggle
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
@@ -690,7 +595,7 @@
             }
         });
 
-        // Smooth scroll adjustment for sticky header
+        // Smooth scroll adjustment
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -708,7 +613,6 @@
                         behavior: "smooth"
                     });
                     
-                    // Close mobile menu if open
                     if (window.innerWidth <= 768) {
                         navLinks.style.display = 'none';
                     }
